@@ -1,3 +1,8 @@
 *.exe
 *.apk
 .build-temp/
+__pycache__/
+*.pyc
+apps/backend-server/settings.json
+apps/client-agent/PisonetManager.Agent/appsettings.json
+apps/client-agent/PisonetManager.Agent/appsettings.aprang.json

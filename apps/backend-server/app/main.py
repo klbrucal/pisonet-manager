@@ -5,6 +5,7 @@ from datetime import datetime, timezone
 from hmac import compare_digest
 import asyncio
 import json
+import os
 from pathlib import Path
 import re
 import secrets
@@ -33,7 +34,24 @@ class Settings(BaseModel):
 
 
 def load_settings() -> Settings:
-    return Settings.model_validate_json(SETTINGS_PATH.read_text(encoding="utf-8"))
+    file_settings = {}
+    if SETTINGS_PATH.exists():
+        file_settings = json.loads(SETTINGS_PATH.read_text(encoding="utf-8"))
+
+    environment_settings = {
+        "admin_password": os.getenv("ADMIN_PASSWORD"),
+        "client_secret": os.getenv("CLIENT_SECRET"),
+        "idle_threshold_minutes": os.getenv("IDLE_THRESHOLD_MINUTES"),
+    }
+    values = {
+        **file_settings,
+        **{
+            key: value
+            for key, value in environment_settings.items()
+            if value not in (None, "")
+        },
+    }
+    return Settings.model_validate(values)
 
 
 def save_settings() -> None:

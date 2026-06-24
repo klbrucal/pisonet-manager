@@ -46,6 +46,30 @@ Password: Admin
 
 For other LAN devices, replace `localhost` with the server PC's reserved LAN IP and allow inbound TCP port `8000` in Windows Firewall.
 
+## Deploy The Backend On Render
+
+Create a Render Web Service from the GitHub repository with these settings:
+
+```text
+Runtime: Python
+Build Command: pip install -r apps/backend-server/requirements.txt
+Start Command: uvicorn --app-dir apps/backend-server app.main:app --host 0.0.0.0 --port $PORT
+```
+
+Set these Render environment variables:
+
+```text
+ADMIN_PASSWORD=your dashboard password
+CLIENT_SECRET=your agent secret
+IDLE_THRESHOLD_MINUTES=5
+```
+
+For cloud deployment, publish agents with a secure WebSocket URL:
+
+```text
+wss://your-render-service.onrender.com/ws/client
+```
+
 ## Run The Desktop Dashboard
 
 Set `ServerUrl` in `apps/frontend-dashboard-windows/PisonetManager.Desktop/appsettings.json`, then run:
