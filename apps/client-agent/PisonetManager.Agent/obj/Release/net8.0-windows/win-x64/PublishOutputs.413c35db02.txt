@@ -1,0 +1,6 @@
+C:\Users\Kevin\Documents\Development\comshop-control\client-agent\ShopControl.Agent\publish-check\D3DCompiler_47_cor3.dll
+C:\Users\Kevin\Documents\Development\comshop-control\client-agent\ShopControl.Agent\publish-check\PenImc_cor3.dll
+C:\Users\Kevin\Documents\Development\comshop-control\client-agent\ShopControl.Agent\publish-check\PresentationNative_cor3.dll
+C:\Users\Kevin\Documents\Development\comshop-control\client-agent\ShopControl.Agent\publish-check\vcruntime140_cor3.dll
+C:\Users\Kevin\Documents\Development\comshop-control\client-agent\ShopControl.Agent\publish-check\wpfgfx_cor3.dll
+C:\Users\Kevin\Documents\Development\comshop-control\client-agent\ShopControl.Agent\publish-check\ShopControl.Agent.exe

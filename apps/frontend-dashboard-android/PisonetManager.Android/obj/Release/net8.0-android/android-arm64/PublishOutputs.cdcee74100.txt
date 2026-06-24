@@ -1,0 +1,3 @@
+C:\Users\Kevin\Documents\Development\pisonet-manager\apps\frontend-dashboard-android\PisonetManager.Android\bin\Release\net8.0-android\android-arm64\publish\com.pisonetmanager.dashboard-Signed.apk
+C:\Users\Kevin\Documents\Development\pisonet-manager\apps\frontend-dashboard-android\PisonetManager.Android\bin\Release\net8.0-android\android-arm64\publish\com.pisonetmanager.dashboard.apk
+C:\Users\Kevin\Documents\Development\pisonet-manager\apps\frontend-dashboard-android\PisonetManager.Android\bin\Release\net8.0-android\android-arm64\publish\_Microsoft.Android.Resource.Designer.dll

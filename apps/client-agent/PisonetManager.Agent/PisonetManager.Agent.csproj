@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <PublishSingleFile>true</PublishSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <DebugType>None</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AgentLocation Condition="'$(AgentLocation)' == ''">Test</AgentLocation>
+    <IntermediateOutputPath>obj\$(AgentLocation)\$(Configuration)\</IntermediateOutputPath>
+    <OutputPath>bin\$(AgentLocation)\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(AgentLocation)' == 'Test'">
+    <None Remove="appsettings.json" />
+    <EmbeddedResource Include="appsettings.json" LogicalName="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(AgentLocation)' == 'Aprang'">
+    <None Remove="appsettings.aprang.json" />
+    <EmbeddedResource Include="appsettings.aprang.json" LogicalName="appsettings.json" />
+  </ItemGroup>
+
+  <Target Name="ValidateAgentLocation" BeforeTargets="PrepareForBuild"
+          Condition="'$(AgentLocation)' != 'Test' and '$(AgentLocation)' != 'Aprang'">
+    <Error Text="AgentLocation must be Test or Aprang." />
+  </Target>
+</Project>

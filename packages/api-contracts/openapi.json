@@ -1,0 +1,604 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Pisonet Manager",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "Dashboard",
+        "operationId": "dashboard__get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/login": {
+      "post": {
+        "summary": "Login",
+        "operationId": "login_api_login_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "type": "object",
+                  "title": "Response Login Api Login Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/logout": {
+      "post": {
+        "summary": "Logout",
+        "operationId": "logout_api_logout_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "type": "object",
+                  "title": "Response Logout Api Logout Post"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/me": {
+      "get": {
+        "summary": "Current Admin",
+        "operationId": "current_admin_api_me_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "anyOf": [
+                      {
+                        "type": "boolean"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "type": "object",
+                  "title": "Response Current Admin Api Me Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/settings": {
+      "get": {
+        "summary": "Get Dashboard Settings",
+        "operationId": "get_dashboard_settings_api_settings_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DashboardSettings"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Update Dashboard Settings",
+        "operationId": "update_dashboard_settings_api_settings_put",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateSettingsRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DashboardSettings"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/clients": {
+      "get": {
+        "summary": "Get Clients",
+        "operationId": "get_clients_api_clients_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/ClientSummary"
+                  },
+                  "type": "array",
+                  "title": "Response Get Clients Api Clients Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/clients/{pc_name}/shutdown": {
+      "post": {
+        "summary": "Shutdown Client",
+        "operationId": "shutdown_client_api_clients__pc_name__shutdown_post",
+        "parameters": [
+          {
+            "name": "pc_name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Pc Name"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "title": "Response Shutdown Client Api Clients  Pc Name  Shutdown Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/clients/{pc_name}/restart": {
+      "post": {
+        "summary": "Restart Client",
+        "operationId": "restart_client_api_clients__pc_name__restart_post",
+        "parameters": [
+          {
+            "name": "pc_name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Pc Name"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "title": "Response Restart Client Api Clients  Pc Name  Restart Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/clients/{pc_name}/applications/{pid}/close": {
+      "post": {
+        "summary": "Close Application",
+        "operationId": "close_application_api_clients__pc_name__applications__pid__close_post",
+        "parameters": [
+          {
+            "name": "pc_name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Pc Name"
+            }
+          },
+          {
+            "name": "pid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "Pid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "title": "Response Close Application Api Clients  Pc Name  Applications  Pid  Close Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/clients/{pc_name}/screen/start": {
+      "post": {
+        "summary": "Start Screen Monitoring",
+        "operationId": "start_screen_monitoring_api_clients__pc_name__screen_start_post",
+        "parameters": [
+          {
+            "name": "pc_name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Pc Name"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "title": "Response Start Screen Monitoring Api Clients  Pc Name  Screen Start Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/clients/{pc_name}/screen/stop": {
+      "post": {
+        "summary": "Stop Screen Monitoring",
+        "operationId": "stop_screen_monitoring_api_clients__pc_name__screen_stop_post",
+        "parameters": [
+          {
+            "name": "pc_name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Pc Name"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  },
+                  "title": "Response Stop Screen Monitoring Api Clients  Pc Name  Screen Stop Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ApplicationSummary": {
+        "properties": {
+          "pid": {
+            "type": "integer",
+            "title": "Pid"
+          },
+          "process_name": {
+            "type": "string",
+            "title": "Process Name"
+          },
+          "window_title": {
+            "type": "string",
+            "title": "Window Title"
+          }
+        },
+        "type": "object",
+        "required": [
+          "pid",
+          "process_name",
+          "window_title"
+        ],
+        "title": "ApplicationSummary"
+      },
+      "ClientSummary": {
+        "properties": {
+          "location": {
+            "type": "string",
+            "title": "Location"
+          },
+          "pc_name": {
+            "type": "string",
+            "title": "Pc Name"
+          },
+          "online": {
+            "type": "boolean",
+            "title": "Online"
+          },
+          "connected_at": {
+            "type": "string",
+            "title": "Connected At"
+          },
+          "last_seen_at": {
+            "type": "string",
+            "title": "Last Seen At"
+          },
+          "active_application": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ApplicationSummary"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "applications": {
+            "items": {
+              "$ref": "#/components/schemas/ApplicationSummary"
+            },
+            "type": "array",
+            "title": "Applications"
+          },
+          "screen_monitoring": {
+            "type": "boolean",
+            "title": "Screen Monitoring"
+          },
+          "idle_seconds": {
+            "type": "integer",
+            "title": "Idle Seconds"
+          },
+          "activity_status": {
+            "type": "string",
+            "title": "Activity Status"
+          }
+        },
+        "type": "object",
+        "required": [
+          "location",
+          "pc_name",
+          "online",
+          "connected_at",
+          "last_seen_at",
+          "active_application",
+          "applications",
+          "screen_monitoring",
+          "idle_seconds",
+          "activity_status"
+        ],
+        "title": "ClientSummary"
+      },
+      "DashboardSettings": {
+        "properties": {
+          "idle_threshold_minutes": {
+            "type": "integer",
+            "title": "Idle Threshold Minutes"
+          }
+        },
+        "type": "object",
+        "required": [
+          "idle_threshold_minutes"
+        ],
+        "title": "DashboardSettings"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "LoginRequest": {
+        "properties": {
+          "location": {
+            "type": "string",
+            "title": "Location"
+          },
+          "password": {
+            "type": "string",
+            "title": "Password"
+          }
+        },
+        "type": "object",
+        "required": [
+          "location",
+          "password"
+        ],
+        "title": "LoginRequest"
+      },
+      "UpdateSettingsRequest": {
+        "properties": {
+          "idle_threshold_minutes": {
+            "type": "integer",
+            "maximum": 1440.0,
+            "minimum": 1.0,
+            "title": "Idle Threshold Minutes"
+          }
+        },
+        "type": "object",
+        "required": [
+          "idle_threshold_minutes"
+        ],
+        "title": "UpdateSettingsRequest"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}

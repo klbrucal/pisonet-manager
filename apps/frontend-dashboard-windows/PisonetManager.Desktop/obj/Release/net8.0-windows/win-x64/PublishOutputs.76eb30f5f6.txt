@@ -1,0 +1,4 @@
+C:\Users\Kevin\Documents\Development\pisonet-manager\apps\frontend-dashboard-windows\PisonetManager.Desktop\dist\Microsoft.Web.WebView2.Core.xml
+C:\Users\Kevin\Documents\Development\pisonet-manager\apps\frontend-dashboard-windows\PisonetManager.Desktop\dist\Microsoft.Web.WebView2.WinForms.xml
+C:\Users\Kevin\Documents\Development\pisonet-manager\apps\frontend-dashboard-windows\PisonetManager.Desktop\dist\Microsoft.Web.WebView2.Wpf.xml
+C:\Users\Kevin\Documents\Development\pisonet-manager\apps\frontend-dashboard-windows\PisonetManager.Desktop\dist\PisonetManager.Desktop.exe

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Pisonet Manager</string>
+    <string name="default_server">http://192.168.0.5:8000</string>
+</resources>

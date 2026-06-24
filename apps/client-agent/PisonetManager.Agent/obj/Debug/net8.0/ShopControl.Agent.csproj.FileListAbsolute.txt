@@ -1,0 +1,15 @@
+C:\Users\Kevin\Documents\Development\comshop-control\client-agent\ShopControl.Agent\bin\Debug\net8.0\appsettings.json
+C:\Users\Kevin\Documents\Development\comshop-control\client-agent\ShopControl.Agent\bin\Debug\net8.0\ShopControl.Agent.exe
+C:\Users\Kevin\Documents\Development\comshop-control\client-agent\ShopControl.Agent\bin\Debug\net8.0\ShopControl.Agent.deps.json
+C:\Users\Kevin\Documents\Development\comshop-control\client-agent\ShopControl.Agent\bin\Debug\net8.0\ShopControl.Agent.runtimeconfig.json
+C:\Users\Kevin\Documents\Development\comshop-control\client-agent\ShopControl.Agent\bin\Debug\net8.0\ShopControl.Agent.dll
+C:\Users\Kevin\Documents\Development\comshop-control\client-agent\ShopControl.Agent\bin\Debug\net8.0\ShopControl.Agent.pdb
+C:\Users\Kevin\Documents\Development\comshop-control\client-agent\ShopControl.Agent\obj\Debug\net8.0\ShopControl.Agent.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kevin\Documents\Development\comshop-control\client-agent\ShopControl.Agent\obj\Debug\net8.0\ShopControl.Agent.AssemblyInfoInputs.cache
+C:\Users\Kevin\Documents\Development\comshop-control\client-agent\ShopControl.Agent\obj\Debug\net8.0\ShopControl.Agent.AssemblyInfo.cs
+C:\Users\Kevin\Documents\Development\comshop-control\client-agent\ShopControl.Agent\obj\Debug\net8.0\ShopControl.Agent.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\Documents\Development\comshop-control\client-agent\ShopControl.Agent\obj\Debug\net8.0\ShopControl.Agent.dll
+C:\Users\Kevin\Documents\Development\comshop-control\client-agent\ShopControl.Agent\obj\Debug\net8.0\refint\ShopControl.Agent.dll
+C:\Users\Kevin\Documents\Development\comshop-control\client-agent\ShopControl.Agent\obj\Debug\net8.0\ShopControl.Agent.pdb
+C:\Users\Kevin\Documents\Development\comshop-control\client-agent\ShopControl.Agent\obj\Debug\net8.0\ShopControl.Agent.genruntimeconfig.cache
+C:\Users\Kevin\Documents\Development\comshop-control\client-agent\ShopControl.Agent\obj\Debug\net8.0\ref\ShopControl.Agent.dll

@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "bUn8xyVcy9I=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Kevin\\Documents\\Development\\pisonet-manager\\apps\\frontend-dashboard-windows\\PisonetManager.Desktop\\PisonetManager.Desktop.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Kevin\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.28\\microsoft.net.illink.tasks.8.0.28.nupkg.sha512",
+    "C:\\Users\\Kevin\\.nuget\\packages\\microsoft.web.webview2\\1.0.4022.49\\microsoft.web.webview2.1.0.4022.49.nupkg.sha512",
+    "C:\\Users\\Kevin\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.28\\microsoft.netcore.app.runtime.win-x64.8.0.28.nupkg.sha512",
+    "C:\\Users\\Kevin\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.28\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.28.nupkg.sha512",
+    "C:\\Users\\Kevin\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.28\\microsoft.aspnetcore.app.runtime.win-x64.8.0.28.nupkg.sha512"
+  ],
+  "logs": []
+}

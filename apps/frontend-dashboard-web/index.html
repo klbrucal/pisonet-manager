@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pisonet Manager</title>
+    <link rel="stylesheet" href="/dashboard-assets/style.css?v=20260622-1" />
+  </head>
+  <body>
+    <main id="loginView" class="login-shell" hidden>
+      <form id="loginForm" class="login-panel">
+        <h1>Pisonet Manager</h1>
+        <label for="locationInput">Location</label>
+        <select id="locationInput" name="location" required>
+          <option value="All" selected>All</option>
+          <option value="Test">Test</option>
+          <option value="Aprang's Pisonet">Aprang's Pisonet</option>
+        </select>
+        <label for="passwordInput">Password</label>
+        <input id="passwordInput" name="password" type="password" autocomplete="current-password" required />
+        <p id="loginError" class="form-error" hidden></p>
+        <button type="submit">Sign in</button>
+      </form>
+    </main>
+
+    <main id="appView" class="shell" hidden>
+      <header class="topbar">
+        <div>
+          <h1>Pisonet Manager</h1>
+          <p id="connectionText">Connecting...</p>
+        </div>
+        <div class="topbar-actions">
+          <button id="refreshButton" type="button">Refresh</button>
+          <button id="logoutButton" class="secondary" type="button">Sign out</button>
+        </div>
+      </header>
+
+      <nav class="app-nav" aria-label="Main navigation" role="tablist">
+        <button class="nav-tab active" type="button" role="tab" aria-selected="true" data-page="dashboard">Dashboard</button>
+        <button class="nav-tab" type="button" role="tab" aria-selected="false" data-page="settings">Settings</button>
+      </nav>
+
+      <section id="dashboardPage" class="panel app-page">
+        <div class="panel-header">
+          <h2>Client PCs</h2>
+          <span id="countText">0 online</span>
+        </div>
+        <div id="clientGrid" class="client-grid"></div>
+        <p id="emptyText" class="empty">No client PCs are online.</p>
+      </section>
+
+      <section id="settingsPage" class="panel app-page" hidden>
+        <div class="panel-header">
+          <h2>Settings</h2>
+        </div>
+        <div class="settings-list">
+          <div class="setting-row">
+            <span>
+              <strong>Idle threshold</strong>
+              <small>Minutes without keyboard or mouse activity before a client is idle.</small>
+            </span>
+            <div class="setting-control">
+              <input id="idleThresholdInput" type="number" min="1" max="1440" step="1" value="5" aria-label="Idle threshold in minutes" />
+              <span>minutes</span>
+              <button id="saveIdleThresholdButton" type="button">Save</button>
+            </div>
+          </div>
+          <label class="setting-row" for="showLastSeenInput">
+            <span>
+              <strong>Show last seen</strong>
+              <small>Display the latest client heartbeat time.</small>
+            </span>
+            <input id="showLastSeenInput" type="checkbox" checked />
+          </label>
+          <label class="setting-row" for="confirmPowerInput">
+            <span>
+              <strong>Confirm power actions</strong>
+              <small>Ask before restarting or shutting down a client PC.</small>
+            </span>
+            <input id="confirmPowerInput" type="checkbox" checked />
+          </label>
+        </div>
+      </section>
+    </main>
+
+    <div id="notifications" class="notifications" aria-live="polite"></div>
+
+    <script src="/dashboard-assets/app.js?v=20260622-1"></script>
+  </body>
+</html>
