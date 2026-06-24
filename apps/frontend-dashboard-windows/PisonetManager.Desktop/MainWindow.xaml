@@ -66,14 +66,14 @@
                              Height="40"
                              Margin="0,0,0,14"
                              Padding="10,8"
-                             Text="http://192.168.0.5:8000" />
+                             Text="https://pisonet-manager-rnem.onrender.com/" />
 
                     <TextBlock Margin="0,0,0,6" FontWeight="SemiBold" Text="Location" />
                     <ComboBox x:Name="LocationInput"
                               Height="40"
                               Margin="0,0,0,14"
                               Padding="10,6"
-                              SelectedIndex="0">
+                              SelectedIndex="2">
                         <ComboBoxItem Content="All" />
                         <ComboBoxItem Content="Test" />
                         <ComboBoxItem Content="Aprang's Pisonet" />

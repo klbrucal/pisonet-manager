@@ -104,7 +104,7 @@ public partial class MainWindow : Window
         {
             var settings = DesktopSettings.Load();
             ServerInput.Text = settings.ServerUrl;
-            LocationInput.SelectedIndex = 0;
+            LocationInput.SelectedIndex = 2;
             PasswordInput.Focus();
         }
         catch (Exception exception)

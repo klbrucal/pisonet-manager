@@ -190,7 +190,7 @@ public sealed class MainActivity : Activity
             this,
             global::Android.Resource.Layout.SimpleSpinnerDropDownItem,
             new[] { "All", "Test", "Aprang's Pisonet" });
-        input.SetSelection(0);
+        input.SetSelection(2);
         form.AddView(input, new LinearLayout.LayoutParams(
             ViewGroup.LayoutParams.MatchParent,
             Dp(48))

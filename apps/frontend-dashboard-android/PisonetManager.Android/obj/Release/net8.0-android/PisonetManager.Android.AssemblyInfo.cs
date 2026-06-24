@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PisonetManager.Android")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.4.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.4+ab4fb3137ef8ee944bf245c867d15f17527d18d7")]
 [assembly: System.Reflection.AssemblyProductAttribute("PisonetManager.Android")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PisonetManager.Android")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.4.0.0")]

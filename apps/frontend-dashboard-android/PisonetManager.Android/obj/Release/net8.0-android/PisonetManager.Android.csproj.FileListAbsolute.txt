@@ -114,3 +114,4 @@ C:\Users\Kevin\Documents\Development\pisonet-manager\apps\frontend-dashboard-and
 C:\Users\Kevin\Documents\Development\pisonet-manager\apps\frontend-dashboard-android\PisonetManager.Android\obj\Release\net8.0-android\stamp\_GenerateJavaStubs.stamp
 C:\Users\Kevin\Documents\Development\pisonet-manager\apps\frontend-dashboard-android\PisonetManager.Android\obj\Release\net8.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Kevin\Documents\Development\pisonet-manager\apps\frontend-dashboard-android\PisonetManager.Android\obj\Release\net8.0-android\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Kevin\Documents\Development\pisonet-manager\apps\frontend-dashboard-android\PisonetManager.Android\obj\Release\net8.0-android\PisonetManager.Android.sourcelink.json

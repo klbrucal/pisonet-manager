@@ -11,7 +11,7 @@ Native .NET Android shell for the shared Pisonet Manager dashboard.
 - Automatic return to native login when the session expires
 - HTTP LAN support for the local FastAPI server
 
-The default server is `http://192.168.0.5:8000`. It can be changed on the login screen.
+The default server is `https://pisonet-manager-rnem.onrender.com/`. It can be changed on the login screen.
 
 ## Build An Installable APK
 
