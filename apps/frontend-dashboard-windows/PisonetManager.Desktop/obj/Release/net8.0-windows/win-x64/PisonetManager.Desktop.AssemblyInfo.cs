@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PisonetManager.Desktop")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ab4fb3137ef8ee944bf245c867d15f17527d18d7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+477f4da33b10f063b6a13754ed9b8c0a3ac5737f")]
 [assembly: System.Reflection.AssemblyProductAttribute("PisonetManager.Desktop")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PisonetManager.Desktop")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

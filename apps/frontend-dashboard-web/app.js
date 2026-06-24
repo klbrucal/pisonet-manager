@@ -12,6 +12,7 @@ const loginError = document.querySelector("#loginError");
 const logoutButton = document.querySelector("#logoutButton");
 const notifications = document.querySelector("#notifications");
 const dashboardPage = document.querySelector("#dashboardPage");
+const clientHeading = document.querySelector("#clientHeading");
 const settingsPage = document.querySelector("#settingsPage");
 const navTabs = [...document.querySelectorAll(".nav-tab")];
 const showLastSeenInput = document.querySelector("#showLastSeenInput");
@@ -22,6 +23,7 @@ const saveIdleThresholdButton = document.querySelector("#saveIdleThresholdButton
 let clients = [];
 let dashboardSocket;
 let authenticated = false;
+let currentLocation = "";
 const screenImages = new Map();
 const expandedFeatures = new Map();
 const knownActivityStatuses = new Map();
@@ -85,6 +87,13 @@ function setConnectionState(text, isOnline) {
   connectionText.dataset.online = String(isOnline);
 }
 
+function setCurrentLocation(location) {
+  currentLocation = location || "";
+  clientHeading.textContent = currentLocation
+    ? `${currentLocation} Client PCs`
+    : "Client PCs";
+}
+
 function showNotification(message, success = true) {
   const notification = document.createElement("div");
   notification.className = `notification ${success ? "success" : "error"}`;
@@ -124,6 +133,7 @@ function showPage(pageName) {
 
 function showLogin() {
   authenticated = false;
+  setCurrentLocation("");
   clients = [];
   if (dashboardSocket) {
     dashboardSocket.close();
@@ -219,7 +229,7 @@ function renderClients() {
     viewApplicationsButton.className = "secondary client-action";
     viewApplicationsButton.type = "button";
     viewApplicationsButton.textContent = applicationsExpanded
-      ? "Hide Applications"
+      ? "Hide Apps"
       : "View Apps";
     viewApplicationsButton.setAttribute("aria-expanded", String(applicationsExpanded));
     viewApplicationsButton.addEventListener("click", () => {
@@ -537,6 +547,8 @@ loginForm.addEventListener("submit", async (event) => {
     return;
   }
 
+  const result = await response.json();
+  setCurrentLocation(result.location);
   passwordInput.value = "";
   await showDashboard();
 });
@@ -544,6 +556,8 @@ loginForm.addEventListener("submit", async (event) => {
 async function initialize() {
   const response = await fetch("/api/me");
   if (response.ok) {
+    const result = await response.json();
+    setCurrentLocation(result.location);
     await showDashboard();
   } else {
     showLogin();
